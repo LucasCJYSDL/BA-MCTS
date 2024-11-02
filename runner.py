@@ -1,5 +1,5 @@
 import os, csv
-import d4rl
+import d4rl, gym
 import random
 import numpy as np
 from tqdm import tqdm
@@ -266,7 +266,8 @@ class Runner(object):
 
         # d4rl stuff - load all the offline data and train
         env = self.model.real_env
-        dataset = d4rl.qlearning_dataset(env)
+        # dataset = d4rl.qlearning_dataset(env)
+        dataset = env.get_dataset()
         N = dataset['rewards'].shape[0] # number of transitions
         
         # load the dyn model or train it based on the dataset
@@ -280,6 +281,10 @@ class Runner(object):
                 nextstate = dataset['next_observations'][i]
                 reward = dataset['rewards'][i]
                 done = bool(dataset['terminals'][i])
+
+                if 'timeouts' in dataset:
+                    final_timestep = dataset['timeouts'][i]
+                    done = done or final_timestep
 
                 t = Transition(state, action, reward, nextstate, done)
 
@@ -306,7 +311,11 @@ class Runner(object):
         all_priors = [uniform_all_prior]
         trans_num = all_probs.shape[1]
         for i in tqdm(range(trans_num - 1)):
-            if dataset['terminals'][i]:
+            done = dataset['terminals'][i]
+            if 'timeouts' in dataset:
+                final_timestep = dataset['timeouts'][i]
+                done = done or final_timestep
+            if done:
                 all_priors.append(uniform_all_prior)
             else:
                 a_prior = all_priors[i]
