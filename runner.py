@@ -267,7 +267,7 @@ class Runner(object):
         # d4rl stuff - load all the offline data and train
         env = self.model.real_env
         dataset = d4rl.qlearning_dataset(env)
-        # dataset = env.get_dataset()
+        # dataset = env.get_dataset() # you need extra hyperparameter fine-tuning if you select to use this line
         N = dataset['rewards'].shape[0] # number of transitions
         
         # load the dyn model or train it based on the dataset
