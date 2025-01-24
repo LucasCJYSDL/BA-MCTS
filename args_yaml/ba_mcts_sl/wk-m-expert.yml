@@ -1,0 +1,33 @@
+args:
+    env_name: walker2d-medium-expert-v2 
+    reward_head: True
+    logvar_head: True
+    states: 'uniform'
+    steps_k: 37 
+    num_rollouts_per_step: 50
+    policy_update_steps: 1000
+    train_policy_every: 100
+    train_val_ratio: 0.2
+    real_sample_ratio: 0.05
+    model_train_freq: 1000
+    max_timesteps: 10000000
+    n_eval_rollouts: 10
+    num_models: 6 # used 12 models for modelling the dynamics though
+    d4rl: True
+    model_retain_epochs: 5
+    mopo_lam: 20.0 
+    min_model_epochs: 350
+    offline_epochs: 1000
+    rl_pretrain_epochs: 100
+    save_model: True
+    train_memory: 2000000
+    val_memory: 500000
+    use_search: True
+    search_ratio: 0.1
+    search_alpha: 0.8
+    search_ucb_coe: 2.5
+    search_root_alpha: 0.3
+    search_n_actions: 20
+    search_n_states: 1
+    model_retain_epochs_sl: 15
+    train_mode: 1
