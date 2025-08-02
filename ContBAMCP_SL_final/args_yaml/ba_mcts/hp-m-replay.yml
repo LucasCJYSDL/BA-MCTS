@@ -1,0 +1,29 @@
+args:
+    env_name: hopper-medium-replay-v2 
+    reward_head: True
+    logvar_head: True
+    states: 'uniform'
+    steps_k: 5 
+    num_rollouts_per_step: 50
+    policy_update_steps: 1000
+    train_policy_every: 100
+    train_val_ratio: 0.2
+    real_sample_ratio: 0.05
+    model_train_freq: 1000
+    max_timesteps: 10000000
+    n_eval_rollouts: 10
+    num_models: 7 
+    d4rl: True
+    model_retain_epochs: 5
+    mopo_lam: 5.0 
+    offline_epochs: 1000 # 500
+    rl_pretrain_epochs: -1
+    save_model: True
+    # save_policy: True
+    use_search: True
+    search_ratio: 0.1
+    search_alpha: 0.8
+    search_ucb_coe: 1.0
+    search_root_alpha: 0.1
+    search_n_actions: 20
+    search_n_states: 1

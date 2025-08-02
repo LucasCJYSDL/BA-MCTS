@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: LightZero
+Version: 0.1.0
+Summary: A lightweight and efficient MCTS/AlphaZero/MuZero algorithm toolkits.
+Home-page: https://github.com/opendilab/LightZero
+Author: opendilab
+Author-email: opendilab@pjlab.org.cn
+License: Apache License, Version 2.0
+Keywords: Reinforcement Learning,MCTS,MuZero
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: DI-engine>=0.4.7
+Requires-Dist: gymnasium[atari]
+Requires-Dist: numpy>=1.22.4
+Requires-Dist: pympler
+Requires-Dist: bsuite
+Requires-Dist: minigrid
+Requires-Dist: moviepy
+Requires-Dist: pycolab
+Requires-Dist: pytest
+Requires-Dist: pooltool-billiards>=0.3.1
+Requires-Dist: line_profiler
+Provides-Extra: test
+Requires-Dist: coverage>=5; extra == "test"
+Requires-Dist: mock>=4.0.3; extra == "test"
+Requires-Dist: flake8~=3.5; extra == "test"
+Requires-Dist: pytest~=6.2.5; extra == "test"
+Requires-Dist: pytest-cov~=3.0.0; extra == "test"
+Requires-Dist: pytest-mock~=3.6.1; extra == "test"
+Requires-Dist: pytest-xdist>=1.34.0; extra == "test"
+Requires-Dist: pytest-rerunfailures~=10.2; extra == "test"
+Requires-Dist: pytest-timeout~=2.0.2; extra == "test"
+Requires-Dist: pytest-benchmark~=3.4.0; extra == "test"
+Requires-Dist: testtools>=2; extra == "test"
+Requires-Dist: hbutils>=0.6.13; extra == "test"
+Requires-Dist: setuptools<=59.5.0; extra == "test"
+Requires-Dist: numpy>=1.22.4; extra == "test"
+Requires-Dist: easydict<2,>=1.7; extra == "test"
+Requires-Dist: swig>=4.1.1; extra == "test"
+Provides-Extra: build
+Requires-Dist: cython>=0.29; extra == "build"
+Requires-Dist: build>=0.7.0; extra == "build"
+Requires-Dist: auditwheel>=4; extra == "build"
+Requires-Dist: numpy>=1.22.4; extra == "build"
+Provides-Extra: doc
+Requires-Dist: Jinja2~=3.0.3; extra == "doc"
+Requires-Dist: sphinx<7; extra == "doc"
+Requires-Dist: sphinx_rtd_theme~=2.0.0; extra == "doc"
+Requires-Dist: sphinx-autodoc-typehints~=1.12.0; extra == "doc"
+Requires-Dist: enum_tools; extra == "doc"
+Requires-Dist: sphinx-toolbox; extra == "doc"
+Requires-Dist: plantumlcli>=0.0.4; extra == "doc"
+Requires-Dist: packaging; extra == "doc"
+Requires-Dist: sphinx-multiversion~=0.2.4; extra == "doc"
+Requires-Dist: where~=1.0.2; extra == "doc"
+Requires-Dist: numpy<2,>=1.22.4; extra == "doc"
+Requires-Dist: easydict<2,>=1.7; extra == "doc"
+Requires-Dist: scikit-learn>=0.24.2; extra == "doc"
+Requires-Dist: nbsphinx>=0.8.8; extra == "doc"
+Requires-Dist: ipython>=7.16.3; extra == "doc"
+Requires-Dist: psutil>=5.8.0; extra == "doc"
+Requires-Dist: ipykernel>=6.15; extra == "doc"
+Requires-Dist: py-cpuinfo>=8.0.0; extra == "doc"
+Requires-Dist: recommonmark>=0.7.1; extra == "doc"
